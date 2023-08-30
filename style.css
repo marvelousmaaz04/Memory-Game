@@ -42,3 +42,50 @@ span{
 .op-1{
     opacity: 1;
 }
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Keep your existing CSS */
+
+/* Adjust the sizes and spacing for small screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(4, 15vh);
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .overlay {
+        height: 15vh;
+        width: 40vw;
+        font-size: 14px;
+    }
+
+    .scoreContainer {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(4, 15vh);
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .overlay {
+        height: 15vh;
+        width: 40vw;
+        font-size: 14px;
+    }
+
+    .scoreContainer {
+        font-size: 24px;
+    }
+}
