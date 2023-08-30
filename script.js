@@ -17,12 +17,12 @@ const shuffle = (array) => {
 }
 
 shuffle(images);
-console.log(images);
+
 const griditems = document.querySelectorAll(".grid-item");
 Array.from(griditems).forEach((Element, index) => {
-    // console.log(Element.id);
+    
     Element.style.backgroundImage = `url(${images[index]})`;
-    // remember to use `` with ${} when doing things at runtime. backticks
+    
 })
 
 Array.from(document.getElementsByClassName("overlay")).forEach((Element) => {
@@ -63,9 +63,9 @@ const checkMatch = (id1, id2) => {
     const gridItem2 = selectedItem2.parentElement;
 
     style_1 = getComputedStyle(gridItem1).getPropertyValue("background-image");
-    console.log(style_1);
+   
     style_2 = getComputedStyle(gridItem2).getPropertyValue("background-image");
-    console.log(style_2);
+    
 
     if (style_1 == style_2) {
         setTimeout(() => {
@@ -113,12 +113,7 @@ const checkMatch = (id1, id2) => {
 
 
 const showDialog = (message, callback) => {
-    // setTimeout(() => {
-    //     alert(message);
-    //     if(typeof callback === 'function'){
-    //         callback();
-    //     }
-    // },0)
+    
     alert(message);
     if (typeof callback === 'function') {
         callback();
